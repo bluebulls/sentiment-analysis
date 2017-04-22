@@ -16,7 +16,7 @@ app.post('/analysis',function(req,res){
 var r1 = sentiment(req.body.state);
 if(r1.comparative > 0.3)
 	res.send('positive')
-else if(r1.comparative < 0.3)
+else if(r1.comparative < -0.3)
 	res.send('negative')
 else
 	res.send('neutral')
